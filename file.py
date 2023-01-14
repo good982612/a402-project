@@ -1,0 +1,13 @@
+import tkinter as tk
+window = tk.Tk()
+window.title('file_Menu')
+window.geometry('500x500')
+menuBar = tk.Menu(window)
+fileMenu = tk.Menu(menuBar, tearoff = False)
+fileMenu.add_command(label = 'new file')
+fileMenu.add_command(label = 'save file')
+fileMenu.add_separator()
+fileMenu.add_command(label = 'say goodbye')
+menuBar.add_cascade(label = 'file',menu = fileMenu)
+window.config(menu = menuBar)
+window.mainloop()
